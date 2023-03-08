@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
@@ -39,22 +40,40 @@ class MyApp extends StatelessWidget {
                     fontSize: 18,
                     letterSpacing: 2.0),
               ),
-              Container(
-                  child: Row(
-                children: [
-                  Icon(
-                    Icons.phone,
-                    color: Colors.white,
+              SizedBox(
+                height:20.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.lime,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                      leading: Icon(Icons.phone,
+                      color: Colors.teal),
+                    title: Text('647  731 8899',
+                    style: TextStyle(color: Colors.teal.shade900,
+                    fontFamily: 'PLayfairDisplay-Regular',
+                    fontSize: 20.0), ),
+
                   ),
-                  Text(
-                    '647 731 8899',
-                    style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'PlayfairDisplay-Regular',
-                         fontSize: 20.0),
-                  )
-                ],
-              )),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.mail,
+                      color: Colors.teal),
+                  title: Text('example@gmail.com',
+                    style: TextStyle(color: Colors.teal.shade900,
+                        fontFamily: 'PLayfairDisplay-Regular',
+                        fontSize: 20.0), ),
+
+                ),
+              ),
+
             ],
           ),
         ),
